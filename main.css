@@ -1,0 +1,885 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title-text{
+    font-size: 60px;
+    text-align: center;
+}
+body{
+    font-family: 'Baloo Chettan 2', cursive;
+    line-height: 1.5;
+}
+/*navbar*/
+.mynav1{
+    float:left;
+    background: orange;
+    width: 25px;
+    cursor:pointer;
+}
+.cart{
+    display: inline-block;
+    margin-right: 70px;
+    color: orange;
+    width: 25px;
+    position: fixed;
+    top:20px;
+  right: 0px;
+  width: 70px;
+    cursor:pointer;
+    z-index: 1;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+#menu-bar{
+    width: 350px;
+    height: 10px;
+    margin: 10px 10px 10px 10px;
+    position:fixed;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+  
+.bar{
+    background:orange;
+    border-radius: 10%;
+    transition: .4s;
+}
+#bar1{
+    width:40px;
+    height: 10px;
+    transform: translateY(-4px);
+}
+#bar2{
+    width: 40px;
+    height: 10px;
+}
+#bar3{
+    width: 40px;
+    height: 10px;
+    transform: translateY(4px);
+}
+.change .bar{
+    background: #fff;
+}
+.change #bar1{
+    transform: translateY(6px);
+    rotate: z(45deg);
+}
+.change #bar3{
+    transform: translateY(-15px);
+    rotate: z(-45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+.nav li a{
+    text-decoration: none;
+    color: orange;
+    font-size: 30px;
+    text-transform:uppercase ;
+    font-weight: bold;
+   
+}
+.nav li a:hover{
+    color: #fff;
+    background: orange;
+    padding-left: 10px;
+}
+.nav li{
+    margin: 5px 10px 5px 5px;
+    padding-top: 5px;
+    list-style-type:none;
+}
+.nav{
+    display: none;
+    
+}
+.change-btn{
+    display: block;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.8);
+}
+
+/*header*/
+.header{
+   /* display: flex;*/
+    min-height: 100vh;
+     background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+     url("https://c1.wallpaperflare.com/preview/228/491/708/food-cake-berry-dessert.jpg")center/cover no-repeat fixed;
+    /* flex-direction: column;*/
+    margin-top: auto; 
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+.firstletter{
+    font-size:140px;
+}
+.hero .title{
+    color: #fff;
+    font-size: 100px;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 5px 5px 10px orange;
+    animation-name: htext;
+    animation-duration: 3s ;
+}
+@keyframes htext {
+    0%   { color :orange; top:-500px;}
+  100%   { color : #fff;top:0px;}
+  }
+.hero-button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: orange;
+    color:#fff;
+    cursor: pointer;
+    border: 2px solid orange;
+    margin-top:10px;
+  
+}
+.hero-button:hover{
+    background: #fff;
+    color: orange;
+    border: none;
+    
+
+}
+.pulsate{
+    /*-webkit-*/animation: pulsate 3s ease-in-out;
+    /*-webkit-*/animation-iteration-count:infinite ;
+    opacity: .3;
+    color: black;
+}
+@keyframes pulsate{
+    0% {
+        opacity: .3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+
+}
+
+/* End of header*/
+/*==========About Section============*/
+#about{
+    padding: 40px;
+}
+
+.about{
+    margin: 30px 0;
+    display: flex;
+}
+.about-icon .fas{
+    font-size: 60px;
+    color: orange;
+    margin-right: 20px;
+}
+.about-subtitle{
+    text-transform: capitalize;
+    color: orange;
+    font-size: 25px;
+}
+.about-info{
+    margin-top: 10px;
+    line-height: 1.5;
+    font-style: italic;
+}
+.about-icon:hover .fas,
+.about-subtitle:hover{
+ transition: transform 2s ease, color 2s ease;
+ transform: translateY(-10px);
+    color: #cd6100;
+    cursor: pointer;
+}
+@media screen and (min-width: 576px){
+    .about-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about{
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+@media screen and (min-width:972px){
+    .about{
+        flex: 0 0 calc(33.3% - 16px);
+    }
+}
+/*=====end of Icon Section======*/
+/*=====Menu Section======*/
+.menu-image{
+    min-height: 80vh;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Bowls_of_grains.jpg") center/cover fixed no-repeat;
+}
+.menu-text{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: orange;
+    columns: #0000;
+    padding: 40px 0;
+}
+.menu-text-center{
+    width: 90%;
+    margin: 0 auto;
+}
+.menu-text h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.menu-text p{
+    margin: 20px 0;
+    line-height: 2;
+}
+.menu-text a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(10, 10, 10);
+    color:orange;
+    cursor: pointer;
+    border: 2px solid #000;
+    margin-top:10px;
+}
+.menu-text a:hover{
+    color:orange;
+    background: #fff;
+    border:none;
+
+}
+@media screen and (min-width:776px){
+    .menu{
+        display: flex;
+    }
+    .menu-text{
+        flex: 0 0 30%;
+    }
+    .menu-image{
+        flex: 0 0 70%;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%)
+    }
+    .menu{
+        background: orange;
+    }
+}
+/*========End of Menu Section====*/
+/*=====Menu Section======*/
+
+.recipie-image{
+    min-height: 80vh;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: orange;
+    columns: #0000;
+    padding: 0px 0;
+}
+.recipie-image :hover{
+background:(rgba(0,0,0,0.3));
+display:content;
+}
+.recipie-text{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: orange;
+    columns: #0000;
+    padding: 0px 0;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dal_Makhni_%26_Shahi_Paneer.jpg/1280px-Dal_Makhni_%26_Shahi_Paneer.jpg") center/cover fixed no-repeat;
+}
+
+.recipie-text-center{
+    width: 90%;
+    margin: 0 auto;
+}
+.recipie-image h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.recipie-image p{
+    margin: 20px 0;
+    line-height: 2;
+}
+.recipie-image a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(10, 10, 10);
+    color:orange;
+    cursor: pointer;
+    border: 2px solid #000;
+    margin-top:10px;
+}
+.recipie-image a:hover{
+    color:orange;
+    background: #fff;
+    border:none;
+
+}
+@media screen and (min-width:776px){
+    .recipie{
+        display: flex;
+    }
+    .recipie-text{
+        flex: 0 0 30%;
+    }
+    .recipie-image{
+        flex: 0 0 70%;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%)
+    }
+    .recipie{
+        background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dal_Makhni_%26_Shahi_Paneer.jpg/1280px-Dal_Makhni_%26_Shahi_Paneer.jpg") center/cover fixed no-repeat;
+    }
+    .about12{
+        background: url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Bellagio_Casino_and_Hotel_at_Night.jpg") center/cover fixed no-repeat;
+    }
+}
+/*========End of Menu Section====*/
+
+/*==========Social Icons====*/
+
+.facebook{
+    color: #3b5998;
+}
+.twitter{
+  color:  #38A1F3;
+}
+.instagram{
+ color:   #e1306c;
+}
+.plus{
+    color:#db4a39;
+}
+/*====end of Social Icons======*/
+/*==========Numbers/ Counters=======*/
+.number{
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+     url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Healthy_food.jpg/1280px-Healthy_food.jpg") center/cover fixed no-repeat;
+    padding: 60px 0;
+    color:#fff;
+ }
+ .number p{
+     font-size: 30px;
+     font-weight: bold;
+ }
+.number:hover{
+    color: orange;
+}
+.number .fas{
+    font-size: 60px;
+    margin: 20px 0;
+}
+.number h3{
+    text-transform: uppercase;
+}
+@media screen and (min-width:576PX){
+    #numbers {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 992px){
+    #numbers{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/*==========Cards Section========*/
+#food{
+    padding: 20px ;
+}
+.food-container{
+     max-width: 90vw;
+    margin: 0 auto;
+}
+.food-card{
+    position: relative;
+    background: linear-gradient(rgba(205, 96, 0, 0.7),rgba(205,96,0,0.7));
+    margin:20px 0;
+    color: #000;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 16px;
+    border: 1px solid orange;
+    box-shadow: 2px 3px 1px 1px #cd6100;
+}
+
+#food img{
+    width: 100%;
+    height: 400px;
+    display: block;
+    transition: transform 4s;
+}
+
+.img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 4s;
+
+}
+.img-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0;
+    color: #000;
+    transition: opacity 4s;
+}
+.img-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.food-card:hover img{
+    opacity: 0.4;
+    transform: scale(1.3);
+}
+.food-card:hover .img-text,
+.food-card:hover  .img-footer{
+    opacity:1;
+}
+.food-btn{
+    display: inline-block;
+    background:#000;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 12px 32px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 180px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease-in-out;
+    font-size:18px;
+    outline:none;
+}
+.food-btn:hover{
+    color: orange;
+    background:#ffff;
+    border: #000;
+    outline: none;
+}
+.fas{
+    font-size: 30px;
+}
+@media screen and (min-width: 576px){
+    .food-container{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-column-gap: 16px;
+    }
+}
+@media screen and (min-width: 992px){
+    .food-container{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-column-gap:16px ;
+    }
+}
+/*========End of Cards Section=======*/
+/*=========Gallery Section============*/
+#gallery{
+    padding: 40px;
+    background: #fff;
+}
+.gallery-item{
+    background: linear-gradient(rgb(rgba(241, 161, 13)) rgb(rgb(255, 165, 0)));
+}
+.gallery-item img{
+    display:block;
+    width: 360px;
+    height: 280px;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+.gallery-item img:hover{
+    opacity: 0.5;
+}
+@media screen and (min-width:576px){
+    #gallery-center{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width:992px){
+    #gallery-center{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.italian-{
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+     url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Healthy_food.jpg/1280px-Healthy_food.jpg") center/cover fixed no-repeat;
+    padding: 60px 0;
+    color:#fff;
+ }
+ .italian p{
+     font-size: 30px;
+     font-weight: bold;
+ }
+/*==========Footer========*/
+.footer{
+    background:#000;
+    text-align: center;
+}
+.footer .text{
+text-transform: uppercase;
+color: #fff;
+font-size: 24px;
+margin-top: 20px;
+}
+.footer a{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 40px;
+    border-radius:5px;
+    transition: transform 2s ease, color 2s ease;
+}
+.footer a:hover{
+    transform: translateY(-20px);
+}
+/*===============================================================End of Home Page=====================================================*/
+/*=============================================================Start of Menue Page=====================================================*/
+.header1{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_960_720.jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End of Menue Page=====================================================*/
+ /*=============================================================Start of Indian Cuisine=====================================================*/
+.header2{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://images.pexels.com/photos/941891/pexels-photo-941891.jpeg?cs=srgb&dl=pexels-chan-walrus-941891.jpg&fm=jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End Indian Cuisinne=====================================================*/
+ /*=============================================================Start of Italian Cuisine=====================================================*/
+.header3{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://storage.needpix.com/rsynced_images/skewer-3370443_1280.jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End Italian Cuisinne=====================================================*/
+ 
+ /*=============================================================Start of Continental Cuisine=====================================================*/
+.header4{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://images.pexels.com/photos/2448688/pexels-photo-2448688.jpeg?cs=srgb&dl=pexels-anush-gorak-2448688.jpg&fm=jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End Continental Cuisinne=====================================================*/
+ /*=============================================================Start of Chineese Cuisine=====================================================*/
+.header5{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://storage.needpix.com/rsynced_images/wok-dish-1363477_1280.jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End Chineese Cuisinne=====================================================*/
+ /*=============================================================Start of Driinks=====================================================*/
+.header6{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://i.pinimg.com/originals/f5/fe/60/f5fe606487b6ae56ea20f0bdd335b89f.jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End Drinks=====================================================*/
+ /*=============================================================Start of Desert=====================================================*/
+.header7{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url(" https://s1.1zoom.me/b4645/358/Sweets_Ice_cream_Powidl_Black_background_Balls_527369_3840x2400.jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+
+ /*=============================================================End Desert=====================================================*/
+ /*=============================================================Start of About Us=====================================================*/
+.header12{
+    /* display: flex;*/
+     min-height: 100vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://upload.wikimedia.org/wikipedia/commons/e/e2/USA_-_Nevada_-_Las_Vegas_-_Strip.jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+ .about12-image{
+    min-height: 80vh;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: orange;
+    columns: #0000;
+    padding: 0px 0;
+}
+.about12-image :hover{
+background:(rgba(0,0,0,0.3));
+display:content;
+}
+
+.about12-text-center{
+    width: 90%;
+    margin: 0 auto;
+}
+.about12-image h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.about12-image p{
+    margin: 20px 0;
+    line-height: 2;
+}
+.about12-image a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(10, 10, 10);
+    color:orange;
+    cursor: pointer;
+    border: 2px solid #000;
+    margin-top:10px;
+}
+.about12-image a:hover{
+    color:orange;
+    background: #fff;
+    border:none;
+
+}
+@media screen and (min-width:776px){
+    .about12{
+        display: flex;
+    }
+    .about12-text{
+        flex: 0 0 30%;
+    }
+    .about12-image{
+        flex: 0 0 70%;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%)
+    }
+    
+    .about12{
+        background: url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Bellagio_Casino_and_Hotel_at_Night.jpg") center/cover fixed no-repeat;
+    }
+}
+ .about12-text{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: orange;
+    columns: #0000;
+    padding: 0px 0;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Bellagio_Casino_and_Hotel_at_Night.jpg") center/cover fixed no-repeat;
+}
+ /*=============================================================End of about us=====================================================*/
+ /*========================================================Cart==================================================================*/
+ .header25{
+    /* display: flex;*/
+     min-height: 15vh;
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+      url("https://images.pexels.com/photos/941891/pexels-photo-941891.jpeg?cs=srgb&dl=pexels-chan-walrus-941891.jpg&fm=jpg")center/cover no-repeat fixed;
+     /* flex-direction: column;*/
+     margin-top: auto; 
+ }
+ .hero2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 10%;
+}
+.hero2 .title{
+    color: orange;
+    margin-top: 35px;
+    font-size: 90px;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 5px 5px 10px #fff;
+    animation-name: htext;
+    animation-duration: 3s ;
+}
+.products-container{
+    max-width: 656px;
+    justify-content: center;
+    margin:0 auto;
+    margin-top: 50px;
+    display:flex;
+    flex-wrap: wrap;
+}
+.product-header{
+    width:100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom:4px solid lightgray;
+    margin:0 auto;
+}
+.product-title{
+    width:45%;
+}
+.price{
+    width:15%;
+    border-bottom:1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width:30%;
+    border-bottom:1px solid lightgray;
+    display: flex;
+    align-items: center;
+
+}
+.total{
+    width:10%;
+    border-bottom:1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+.product{
+    width:45%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding: 10px 0;
+    border-bottom:1px solid lightgray;
+
+}
+#close{
+    font-size: 25px;
+    color: orange;
+    margin-left:10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.orderNow{
+    
+    color:orange;
+    border: black 2px solid;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+}
+.products{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+
+}
+.products img{
+    width:75px;
+    height:75px;
+}
+.basketTotalContainer{
+    display:flex;
+    justify-content: flex-end;
+    width:100%;
+    padding:10px 0;
+}
+.basketTotalTitle{
+    width:20%;
+}
+.basketTotal{
+    width:10%;
+}
+  /*==================================================End of Cart==================================================================*/

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Tummy</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="magnific-popup.css">
+</head>
+<body>
+    <!--Nav bar-->
+   
+    <div id="menu" class="menu">
+        <div id="menu-bar" onclick="onClickMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+   
+        <ul id="nav" class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="indexabout.html">About</a></li>
+            <li><a href="indexmenue.html">Menu</a></li>
+            <li><a href="indexcontact.html">Contact</a></li>
+            <li><a href="indexindian.html">Indian Menu</a></li>
+            <li><a href="indexitalian.html">Italian Menu</a></li>
+            <li><a href="indexcontinental.html">Continental Menu</a></li>
+            <li><a href="indexchineese.html">Chineese Menu</a></li>
+            <li><a href="desert.html">Desert Menu</a></li>
+            <li><a href="indexdrinks.html">Drinks Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+</div>
+<!--End of Nav bar-->
+<div class="cart">
+    <i class="fas fa-shopping-cart">Cart<span>0</span></i>
+</div>
+
+<!--header-->
+<header class="header25">
+    
+    <div class="hero2">
+        <h1 class="title">My Cart</h1>
+    </div>
+
+</header>
+<!-- end of header-->
+<div class="products-container">
+    <div class="product-header">
+        <h5 class="product-title">PRODUCT</h5>
+        <h5 class="price">PRICE</h5>
+        <h5 class="quantity">QUANTITY</h5>
+        <h5 class="total">TOTAL</h5>
+    </div>
+    <div class="products"></div>
+    <form>
+        <input type = "button" value = "Order Now" onclick = "Warn();" class="orderNow" />
+     </form> 
+</div>
+<script type = "text/javascript">
+ <!--
+    function Warn() {
+               alert ("Your Order has been successfully placed");
+    }
+//-->
+</script>
+<script src="onClickMenu.js"></script>
+<script src="mainjs.js"></script>
+<!--End of header-->
+  
